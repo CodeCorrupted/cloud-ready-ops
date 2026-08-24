@@ -4,11 +4,37 @@ Este repositorio contiene la documentación detallada y los scripts necesarios p
 
 ---
 
+## 📋 Tabla de Contenidos
+
+* [Arquitectura de Red e Infraestructura Cloud](#-arquitectura-de-red-e-infraestructura-cloud)
+  * [Subredes Diseñadas](#subredes-diseñadas)
+* [Tecnologías e Infraestructura](#-tecnologías-e-infraestructura)
+* [Pasos de Configuración e Infraestructura](#-pasos-de-configuración-e-infraestructura)
+  * [1. Creación de la VPC y Subredes](#1-creación-de-la-vpc-y-subredes)
+  * [2. Configuración de Cloud NAT para la Subred Privada](#2-configuración-de-cloud-nat-para-la-subred-privada)
+  * [3. Reglas de Firewall (Security Groups)](#3-reglas-de-firewall-security-groups)
+  * [4. Aprovisionamiento de Instancias (VMs)](#4-aprovisionamiento-de-instancias-vms)
+* [Configuración de Servicios](#-configuración-de-servicios)
+  * [Servidor Web (Nginx - Prueba Inicial)](#servidor-web-nginx---prueba-inicial)
+  * [Servidor de Base de Datos (MariaDB)](#servidor-de-base-de-datos-mariadb)
+* [Despliegue de la Aplicación Java (CRUD Zona Fit)](#-despliegue-de-la-aplicación-java-crud-zona-fit)
+  * [1. Instalación de Java y Archivos de Aplicación](#1-instalación-de-java-y-archivos-de-aplicación)
+  * [2. Configuración de Variables de Entorno y Systemd](#2-configuración-de-variables-de-entorno-y-systemd)
+  * [3. Reverse Proxy en Nginx y DNS Local](#3-reverse-proxy-en-nginx-y-dns-local)
+  * [4. Inicialización de la Base de Datos Final](#4-inicialización-de-la-base-de-datos-final)
+* [Simulación de Caída de Servicio y Diagnóstico (Troubleshooting)](#-simulación-de-caída-de-servicio-y-diagnóstico-troubleshooting)
+  * [Escenario de Incidencia](#escenario-de-incidencia)
+  * [Análisis de Logs](#análisis-de-logs)
+  * [Causa Raíz](#causa-raíz)
+  * [Resolución](#resolución)
+
+---
+
 ## 📐 Arquitectura de Red e Infraestructura Cloud
 
 Diagrama arquitectónico de la red:
 
-![[Diagrama_Proyecto_Final.png]]
+![Diagrama](https://github.com/CodeCorrupted/cloud-ready-ops/blob/main/Diagrama_Proyecto_Final.png)
 
 A diferencia de otros proveedores cloud, en GCP no creamos un CIDR global para la red VPC completa, sino que definimos subredes regionales asociadas a rangos de IP específicos. Las reglas de Firewall se aplican a nivel de VPC y se filtran hacia las instancias mediante **etiquetas de red (network tags)**.
 
