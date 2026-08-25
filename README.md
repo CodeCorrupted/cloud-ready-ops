@@ -4,6 +4,8 @@ This repository contains detailed documentation and configuration scripts for pr
 decoupled VPC network infrastructure on **Google Cloud Platform (GCP)**, along with the deployment and 
 troubleshooting of a Full Stack Java web application (Spring Boot + JSF) connected to MariaDB.
 
+> 🇪🇸 **Spanish Version / Versión en Español:** See [README-ES.md](README-ES.md).
+
 ---
 ## 📋 Table of Contents
 
