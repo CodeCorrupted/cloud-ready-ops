@@ -2,6 +2,8 @@
 
 Este repositorio contiene la documentación detallada y los scripts necesarios para el aprovisionamiento de una infraestructura de red VPC desacoplada en **Google Cloud Platform (GCP)**, junto con el despliegue y solución de problemas de una aplicación web Java Full Stack (Spring Boot + JSF) conectada a MariaDB.
 
+> 🇬🇧 **English Version / Versión en Inglés:** Ver [README.md](README.md).
+
 ---
 
 ## 📋 Tabla de Contenidos
